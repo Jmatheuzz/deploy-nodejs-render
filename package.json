@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --transpile-only src/index.ts",
-    "build": "tsc && cd dist && mkdir views && cd .. && cp ./src/views/*.ejs ./dist/views && cp /etc/secrets/.env .",
+    "build": "tsc && cp -r src/views dist/views && cp /etc/secrets/.env .",
     "start": "node dist/index.js"
   },
   "keywords": [],
