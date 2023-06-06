@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    strategy: 
+      matrix: 
+        node-version: [14.x]
+    steps:
+      - name: Checkout
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with: 
+          service-id: srv-chvoipjhp8ucb0s9tln0?key=97htxIU7sIA
+          api-key: rnd_JO6As2LMcTFtAi8OazhqEafib9dpg
+  
